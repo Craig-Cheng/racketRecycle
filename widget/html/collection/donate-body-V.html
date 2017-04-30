@@ -1,0 +1,59 @@
+<div class="weui-cells__title" >捐赠是自发的, 感谢您的捐赠</div>
+<div class="weui-cells weui-cells_form">
+    <div class="weui-cell weui-cell_select">
+        <div class="weui-cell__bd">
+            <select class="weui-select" name="select1" required v-model="type">
+                <option selected="" value="0">类型</option>
+                <option value="1">羽毛球</option>
+                <option value="2">乒乓球</option>
+                <option value="3">棒球</option>
+                <option value="4">网球</option>
+                <option value="5">高尔夫球</option>
+                <option value="6">其他 </option>
+            </select>
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">数量</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入数量" required v-model="amount">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">姓名</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入名称" v-model="name">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">电话</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入电话" v-model="phone">
+        </div>
+    </div>
+<!--     <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">地址</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入受捐机构地址" v-model="insAddress">
+        </div>
+    </div> -->
+        <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="说明" rows="3" v-model="describe"></textarea>
+                <div class="weui-textarea-counter"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="weui-btn-area">
+    <a class="weui-btn weui-btn_primary" style="background-color: #ffb43e;" v-touch:tap="onFinishTap">确定</a>
+</div>

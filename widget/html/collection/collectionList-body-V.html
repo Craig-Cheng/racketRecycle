@@ -1,0 +1,75 @@
+<!-- <div class="ui-main__sort">
+    <div v-for="(index,item) in sortList"  v-touch:tap="onSortTap($index)">
+        <div v-bind:class="{'ui-sort__class':index == sortIndex}">{{item.content}}</div>
+    </div>
+    <div>
+        <input type="text" name="" placeholder="搜索">
+    </div>
+    <div class="ui-query__btn">
+        <i></i>
+    </div>
+</div> -->
+<div>
+    <div class="aui-content aui-margin-b-15" v-for="item in mainList">
+        <ul class="aui-list aui-media-list">
+            <li class="aui-list-header" style="background-color: #ffb43e;color: #fff;font-size: 16px; ">
+                <div class="aui-list-item-left">{{item.institution}}</div>
+                <div class="aui-list-item-right" style="color: #fff;font-size: 16px;">{{item.type | typeChange }}募捐</div>
+            </li>
+            <li class="aui-list-item" v-touch:tap="onDetailTap($index)">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="{{item.evidenceImg}}">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-left">{{item.name}}</div>
+                            <div class="aui-list-item-right" style="background-color: #abd01a;text-align: center;color:#fff;border-radius: 2px;padding: 0 3px;">{{item.donateAddr}}</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-left">期望:{{item.amount}}</div>
+                            <div class="aui-list-item-right">{{item.insPhone}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aui-info" style="padding-top:0">
+                    <div class="aui-info-item">
+                        <img src="../../image/collection/end.png" style="width:1rem" class="" /><span class="aui-margin-l-5">结束时间</span>
+                    </div>
+                    <div class="aui-info-item aui-text-warning">{{item.endTime | time}}</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--  <div class="aui-content aui-margin-b-15">
+        <ul class="aui-list aui-media-list">
+            <li class="aui-list-header" style="background-color: #ffb43e;color: #fff;font-size: 16px; ">
+                <div class="aui-list-item-left">红十字会</div>
+                <div class="aui-list-item-right" style="color: #fff;font-size: 16px;">羽毛球募捐</div>
+            </li>
+            <li class="aui-list-item" v-touch:tap="onDetailTap">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="../../image/good/good1.jpg">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-left">关爱贫困山区健康-放飞梦想</div>
+                            <div class="aui-list-item-right" style="background-color: #abd01a;text-align: center;color:#fff;border-radius: 2px;padding: 0 3px;">西藏</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-left">期望:10000</div>
+                            <div class="aui-list-item-right">020-89893392</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aui-info" style="padding-top:0">
+                    <div class="aui-info-item">
+                        <img src="../../image/collection/end.png" style="width:1rem" class="" /><span class="aui-margin-l-5">结束时间</span>
+                    </div>
+                    <div class="aui-info-item aui-text-warning">2015-07-14 10:31</div>
+                </div>
+            </li>
+        </ul>
+    </div> -->
+</div>

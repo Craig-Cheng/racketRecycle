@@ -1,0 +1,119 @@
+<div class="ui-main">
+    <div class="swiper-container ui-mainImages">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" >
+                <div class="mainImg" style="background-image: url('{{img1}}');"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="mainImg" style="background-image: url('{{img2}}');"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="mainImg" style="background-image: url('{{img3}}');"></div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="ui-describe">
+        <div>
+            <div class="ui-line"></div>
+            <div class="ui-describe__detail">
+                <div>{{brand}}{{name}}{{type | typeChange}}</div>
+                <div>
+                    <p>价格:<span>¥{{price}}</span></p>
+                    <!-- <p>快递:<span></span></p> -->
+                    <p>状态:<span>{{rate_New}}</span></p>
+                </div>
+            </div>
+            <div class="ui-describe__digital">
+                <div>
+                    <i class="ui-nice"></i>
+                    <p>{{up}}</p>
+                </div>
+                <div>
+                    <i class="ui-collection"></i>
+                    <p>{{favNum}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-good">
+        <div class="ui-good__detail">
+            <p class="ui-good__title">商品信息:</p>
+            <div class="ui-detail__list">
+                <div>
+                    <p>产品ID:{{21221阿的萨达的萨达是发放阿士大夫撒旦}}</p>
+                    <p>商品类型:{{type | typeChange}}</p>
+                    <p>卖家:大神</p>
+                </div>
+                <div>
+                    <p>电话:{{phone}}</p>
+                    <p>品牌:{{brand}}</p>
+                    <p>时长:{{time}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-mark">
+        <div>
+            <div class="ui-line"></div>
+            <div class="ui-mark__detail">
+                <p>卖家备注:</p>
+                <p>{{describe}}</p>
+            </div>
+        </div>
+    </div>
+    <!--  <div class="ui-msg">
+        <div class="ui-msg__body">
+            <div class="ui-line"></div>
+            <div class="ui-msg__title">
+                <p>留言:</p>
+            </div>
+            <div class="ui-msg__detail">
+                <span class="ui-user__avatar"></span>
+                <div class="ui-msg__main">
+                    <div class="ui-msg__topLine"></div>
+                    <div class="ui-msg__detail">
+                        <div class="ui-msg__word">
+                            <p>纠结啊的框架萨丁少的地方是阿斯蒂芬啥地方暗示法暗示法暗示法暗示法阿斯蒂芬啊是</p>
+                        </div>
+                        <span class="ui-msg__time">2016/09/09</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-msg__detail">
+                <span class="ui-user__avatar"></span>
+                <div class="ui-msg__main">
+                    <div class="ui-msg__topLine"></div>
+                    <div class="ui-msg__detail">
+                        <div class="ui-msg__word">
+                            <p>纠结啊的框架萨丁</p>
+                        </div>
+                        <span class="ui-msg__time">2016/09/09</span>
+                        <i>卖家</i>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div> -->
+</div>
+<div class="ui-footer__btn">
+    <div v-touch:tap="onCommentTap">
+        <i></i>
+        <span v-show="!isComment">点赞</span>
+        <span v-show="isComment">已赞</span>
+    </div>
+    <div v-touch:tap="onCollecteTap">
+        <i></i>
+        <span v-show="!isColleced">收藏</span>
+        <span v-show="isColleced">已收藏</span>
+    </div>
+    <!--     <div>
+        <i></i>
+        <span>留言</span>
+    </div> -->
+    <div v-touch:tap="onBuyTap">
+        <i></i>
+        <span>立即购买</span>
+    </div>
+</div>

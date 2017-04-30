@@ -1,0 +1,180 @@
+// 导入公共scss模块
+@import "base/base";
+@import "config";
+
+html,
+body {
+    font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    line-height: 1;
+    font-size: $rootFontSize;
+    color: $mainFontColor;
+    background-color: #fff;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#header {
+	box-sizing: content-box;
+	z-index: 999;
+}
+
+.ui-header {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.34rem;
+    color: #333;
+    background-color: #f4f4f4;
+    box-sizing: content-box;
+    z-index: 999;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #c2c2c7;
+        transform: scale(1, 0.5);
+        transform-origin: center center;
+    }
+}
+
+.ui-header__leftBtn,
+.ui-header__rightBtn {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0.88rem;
+    height: 0.88rem;
+    text-align: center;
+    z-index: 9;
+}
+
+.ui-header__leftBtn {
+    left: 0;
+    font-size: 0;
+    &>i{
+        display: inline-block;
+        vertical-align: middle;
+        &.is-arrow{
+            width: 0.24rem;
+            height: 0.42rem;
+            @include bgi-full( url(../image/main/back.png) );
+        }
+    }
+}
+
+// .ui-header__leftBtnMenu {
+//     display: block;
+//     position: absolute;
+//     left: 10px;
+//     width: 30px;
+//     height: .88rem;
+//     font-size: 0;
+//     z-index: 9;
+//     &>span{
+//         display: inline-block;
+//         vertical-align: middle;
+//         &.is-menu{
+//             width: 0.42rem;
+//             height: 0.33rem;
+//             @include bgi-full( url(../image/main/menu.png) );
+//         }
+//     }
+// }
+
+.ui-header__leftBtnMenu{
+    display: block;
+    position: absolute;
+    width: .48rem;
+    height: .48rem;
+    left: .18rem;
+    top: 50%;
+    margin-top: -.24rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../image/main/menu.png);
+    background-size: .42rem .33rem;
+}
+
+.ui-header__rightBtn {
+    right: 0;
+}
+
+.ui-header__title{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.88rem;
+    padding: 0 0.88rem;
+    box-sizing: border-box;
+    @include ellipsis;
+    text-align: center;
+}
+
+.ui-header__more{
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 8px;
+    right: 20px;
+    top: 50%;
+    margin-top: -4px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../image/main/more.png);
+    background-size: 20px 4px;
+}
+
+.ui-list__remind{
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 36px;
+    right: 20px;
+    top: 50%;
+    margin-top: -18px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../image/main/remind.png);
+    background-size: 19px 24px;
+    &>p{
+        display: block;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 2px;
+        right: -6px;
+        line-height: 12px;
+        font-size: 10px;
+        color: #fff;
+        text-align: center;
+        background-color: #ff2929;
+        border-radius: 6px;
+    }
+}
+
+.ui-list__edit{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -18px;
+    width: 40px;
+    height: 36px;
+    line-height: 36px;
+    font-size: .32rem;
+    color: #fff;
+    text-align: center;
+}
+
+input {
+    outline: none;
+}

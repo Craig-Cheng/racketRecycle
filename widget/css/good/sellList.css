@@ -1,0 +1,224 @@
+@charset "UTF-8";
+/* @name: 转为REM单位fn
+ * @ps: 默认宽度为750px
+ */
+/* @name: 上下左右居中 (未知高度)
+ * @ps: 需要设置父元素 display:table
+ */
+/* @name: 上下左右居中 （确定高度）*/
+/*
+ * @name: 文字溢出显示省略号
+ * @ps: 需要设置宽度
+ */
+/* @name: 强制不换行 */
+/* @name: 清除浮动 */
+/*
+ * @name:  三角形
+ * @param: $size  大小
+ * @param: $color 颜色
+ * @param: $type {string}  类型 (up || down || left || right || topleft || topright || bottomleft || bottomright)
+ */
+/* 主色调 */
+/* 辅助色 */
+/* 标题栏背景色 */
+/* 页面背景色 */
+/* 分隔线颜色 */
+/* 字体主色 */
+/* 字体辅助色 */
+/* 一级标题 */
+/* 二级标题 */
+/* 三级标题 */
+/* 正文 */
+/* 说明文字 */
+/* 导航字体 */
+/* 按钮圆角 */
+/* 遮罩透明度 */
+html {
+  padding: 0;
+  margin: 0; }
+
+.ui-main__imagesSwiper {
+  width: 100%;
+  height: 2.76rem;
+  background-color: #fff; }
+
+.ui-main__sort {
+  width: 100%;
+  height: .76rem;
+  line-height: .76rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: .3rem; }
+  .ui-main__sort > div:nth-last-of-type(2) {
+    -webkit-box-flex: 4;
+    -webkit-flex: 4;
+       -moz-box-flex: 4;
+        -ms-flex: 4;
+            flex: 4;
+    height: .76rem;
+    position: relative; }
+    .ui-main__sort > div:nth-last-of-type(2) > input {
+      position: absolute;
+      margin: auto;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1.86rem;
+      height: .47rem;
+      line-height: .47rem;
+      border: 1px solid #ccc;
+      -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+              border-radius: 5px; }
+  .ui-main__sort > div:first-child {
+    -webkit-box-flex: 3;
+    -webkit-flex: 3;
+       -moz-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3; }
+  .ui-main__sort > div:nth-child(2) {
+    -webkit-box-flex: 3;
+    -webkit-flex: 3;
+       -moz-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3; }
+  .ui-main__sort > div:nth-child(3) {
+    -webkit-box-flex: 3;
+    -webkit-flex: 3;
+       -moz-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3; }
+
+.ui-sort__class {
+  font-weight: bold;
+  border-bottom: 1px solid #abd01a; }
+
+.ui-query__btn {
+  position: relative; }
+  .ui-query__btn > i {
+    position: absolute;
+    left: 0;
+    right: .1rem;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: .48rem;
+    height: .48rem;
+    background-image: url(../../image/main/query.png);
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    background-repeat: no-repeat; }
+
+.ui-list__pic {
+  height: 2.76rem;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat; }
+
+.ui-main__list {
+  display: block;
+  width: 100%;
+  height: 4.6rem;
+  margin-top: .02rem; }
+
+.list-left {
+  float: left;
+  width: 48%;
+  margin-left: .08rem;
+  border: 1px solid #ccc;
+  height: 4.6rem;
+  margin-top: .1rem; }
+
+.list-image {
+  width: 100%;
+  height: 3.35rem;
+  background-image: url(../../image/good/good1.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover; }
+
+.list-describe {
+  font-size: .24rem;
+  color: #fff;
+  width: 100%;
+  height: .32rem;
+  line-height: .32rem;
+  text-align: center;
+  background-color: #abd01a; }
+
+.list-detail {
+  display: block;
+  height: .93rem;
+  font-size: 0;
+  text-align: left;
+  padding: .1rem; }
+
+.detail-ms {
+  display: block;
+  color: #000;
+  font-size: 0;
+  height: .33rem;
+  line-height: .33rem; }
+  .detail-ms > p {
+    font-size: .24rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+
+.detail-digital {
+  display: block;
+  font-size: .24rem;
+  height: .6rem;
+  line-height: .6rem; }
+  .detail-digital > p {
+    display: inline-block;
+    color: #ffb43e; }
+
+.nice {
+  display: inline-block;
+  float: right;
+  margin-right: .1rem; }
+  .nice > i {
+    display: inline-block;
+    height: .28rem;
+    width: .28rem;
+    background-image: url(../../image/good/nice.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover; }
+  .nice > p {
+    display: inline-block; }
+
+.collection {
+  display: inline-block;
+  float: right;
+  margin-right: .2rem; }
+  .collection > i {
+    display: inline-block;
+    height: .24rem;
+    width: .28rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    background-image: url(../../image/good/collection.png); }
+  .collection > p {
+    display: inline-block; }
+
+
+/*# sourceMappingURL=data:application/json;base64,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QkFBd0IsRUFBRTs7QUFFOUI7RUFDRSxnQkFBZTtFQUNmLG1CQUFrQjtFQUNsQixlQUFjO0VBQ2Qsb0JBQW1CLEVBQUU7RUFDckI7SUFDRSx1QkFBc0I7SUFDdEIsZ0JBQWUsRUFBRTs7QUFFckI7RUFDRSx1QkFBc0I7RUFDdEIsY0FBYTtFQUNiLHFCQUFvQixFQUFFO0VBQ3RCO0lBQ0UsdUJBQXNCO0lBQ3RCLGdCQUFlO0lBQ2YsZUFBYztJQUNkLGtEQUFpRDtJQUNqRCw4QkFBNkI7SUFDN0IsZ0NBQXVCO09BQXZCLDZCQUF1QjtTQUF2QiwyQkFBdUI7WUFBdkIsd0JBQXVCLEVBQUU7RUFDM0I7SUFDRSx1QkFBc0IsRUFBRTs7QUFFNUI7RUFDRSx1QkFBc0I7RUFDdEIsY0FBYTtFQUNiLHFCQUFvQixFQUFFO0VBQ3RCO0lBQ0UsdUJBQXNCO0lBQ3RCLGdCQUFlO0lBQ2YsZUFBYztJQUNkLDhCQUE2QjtJQUM3QixvQ0FBbUM7SUFDbkMsZ0NBQXVCO09BQXZCLDZCQUF1QjtTQUF2QiwyQkFBdUI7WUFBdkIsd0JBQXVCO0lBQ3ZCLHdEQUF1RCxFQUFFO0VBQzNEO0lBQ0UsdUJBQXNCLEVBQUUiLCJmaWxlIjoiZ29vZC9zZWxsTGlzdC5jc3MiLCJzb3VyY2VSb290IjoiLi4vc2Fzcy8ifQ== */

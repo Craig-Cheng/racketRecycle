@@ -1,0 +1,31 @@
+<div class="ui-edit">
+    <div class="ui-edit__input">
+        <div class="ui-input">
+            <input class="ui-input__class" type="text" name="" placeholder="请输入您的平台昵称" v-model="name">
+        </div>
+        <div class="ui-input">
+            <input class="ui-input__class" type="text" name="" placeholder="请输入邮箱(修改密码凭证)" v-model="mail">
+        </div>
+        <div class="ui-input">
+            <input class="ui-input__class" type="text" name="" placeholder="请输入您的身份证号码" v-model="IDcard">
+        </div>
+        <div class="ui-input">
+            <input class="ui-input__class" type="month" name="" placeholder="请输入您的出生年月" v-model="birth">
+        </div>
+        <div class="ui-input sex">
+            <input class="ui-input__class" type="text" name="" placeholder="请输入您的性别" v-model="sex | sex" >
+            <select class="ui-sex" v-model="sex">
+                <option value="1">男</option>
+                <option  value="2">女</option>
+            </select>
+        </div>
+        <div class="ui-input">
+            <input class="ui-input__class" type="password" name="" placeholder="请输入您支付密码" v-model="payPwd">
+        </div>
+    </div>
+    <div class="ui-footer__button">
+        <div v-touch:tap="onFinishTap">
+            <p>完成编辑</p>
+        </div>
+    </div>
+</div>

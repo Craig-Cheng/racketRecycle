@@ -1,0 +1,14 @@
+<div class="weui-panel__bd">
+    <div class="weui-media-box weui-media-box_small-appmsg">
+        <div v-if='!amount.length' style="font-size: 14px">暂无需要审核的商品</div>
+        <div class="weui-cells" v-for="(index,item) in amount" v-touch:tap="onDetailTap($index)">
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__hd"></div>
+                <div class="weui-cell__bd weui-cell_primary">
+                    <p>{{$index+1}}</p>
+                </div>
+                <span class="weui-cell__ft"></span>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="weui-cells weui-cells_form">
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">原密码</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="password" pattern="[0-9]*" placeholder="请输入原密码" v-model="password">
+        </div>
+    </div>
+    <div class="weui-cell weui-cell_vcode">
+        <div class="weui-cell__hd">
+            <label class="weui-label">新密码</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="password" placeholder="请输入新密码"  v-model="newPassword">
+        </div>
+        <div class="weui-cell__ft" v-touch:tap="onSubmitTap">
+            <button class="weui-vcode-btn">确认提交</button>
+        </div>
+    </div>
+</div>

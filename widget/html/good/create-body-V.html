@@ -1,0 +1,89 @@
+<div class="weui-cells__title">出售商品</div>
+<div class="weui-cells weui-cells_form">
+    <div class="weui-cell weui-cell_select">
+        <div class="weui-cell__bd">
+            <select class="weui-select" name="select1" required v-model="type">
+                <option selected="" value="0">类型</option>
+                <option value="1">羽毛球</option>
+                <option value="2">乒乓球</option>
+                <option value="3">棒球</option>
+                <option value="4">网球</option>
+                <option value="5">高尔夫球</option>
+                <option value="6">其他 </option>
+            </select>
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">品牌</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入品牌" v-model="brand">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">型号</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入型号" v-model="model">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">名字</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入名字" v-model="name">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">价格</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入价格" required v-model="price">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">使用时长</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入时长" v-model="time">
+        </div>
+    </div>
+    <div class="weui-cell weui-cell_select">
+        <div class="weui-cell__bd">
+            <select class="weui-select" name="select1" v-model="rate_New">
+                <option selected="">几成新</option>
+                <option>8成新</option>
+                <option>9成新</option>
+                <option>9.5成新</option>
+                <option>全新</option>
+            </select>
+        </div>
+    </div>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="请输入卖家备注" rows="3" v-model="describe"></textarea>
+                <div class="weui-textarea-counter"></div>
+            </div>
+        </div>
+    </div>
+    <div class="weui-uploader">
+        <p style="margin: 5px 0 5px 5px;">图片上传</p>
+        <div class="weui-uploader__bd">
+            <div class="weui-uploader__input-box" v-touch:tap="onUploadPic1" style="background-image: url('{{img1}}');">
+            </div>
+             <div class="weui-uploader__input-box" v-touch:tap="onUploadPic2" style="background-image: url('{{img2}}');">
+            </div>
+             <div class="weui-uploader__input-box" v-touch:tap="onUploadPic3" style="background-image: url('{{img3}}');">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="weui-btn-area">
+    <a class="weui-btn weui-btn_primary"   style="background-color: #ffb43e;" v-touch:tap="onFinishTap">确定</a>
+</div>

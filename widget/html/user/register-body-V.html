@@ -1,0 +1,26 @@
+<div class="ui-register">
+    <div class="ui-register__input">
+        <div class="ui-input">
+            <input class="ui-input__class" type="text" name="" placeholder="请输入手机号码" v-model="account">
+        </div>
+        <div class="ui-input">
+            <input class="ui-input__class" type="password" name="" placeholder="请设置您的密码" v-model="pwd1">
+            <i class="ui-del" v-touch:tap="onClearTap1"></i>
+        </div>
+        <div class="ui-input">
+            <input class="ui-input__class" type="password" name="" placeholder="请再次输入密码" v-model="pwd2">
+            <i class="ui-del" v-touch:tap="onClearTap2"></i>
+        </div>
+        <div class="ui-input">
+            <i class="ui-footer__aggress"></i>
+            <p class="ui-footer__font">我已阅读并同意该<span>用户协议</span></p>
+        </div>
+        <!-- <div class="ui-check"> -->
+        <!-- </div> -->
+    </div>
+    <div class="ui-footer__button">
+        <div v-touch:tap="onFinishTap">
+            <p>完成注册</p>
+        </div>
+    </div>
+</div>

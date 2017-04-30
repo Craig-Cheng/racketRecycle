@@ -1,0 +1,108 @@
+<div class="weui-cells__title" >募捐活动只能由机构发起,且每次只能存在一个,需要经过管理员审核.</div>
+<div class="weui-cells weui-cells_form">
+    <div class="weui-cell weui-cell_select">
+        <div class="weui-cell__bd">
+            <select class="weui-select" name="select1" required v-model="type">
+                <option selected="" value="0">类型</option>
+                <option value="1">羽毛球</option>
+                <option value="2">乒乓球</option>
+                <option value="3">棒球</option>
+                <option value="4">网球</option>
+                <option value="5">高尔夫球</option>
+                <option value="6">其他 </option>
+            </select>
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">数量</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入数量" required v-model="amount">
+        </div>
+    </div>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="请输入捐赠要求" rows="3" v-model="requirement"></textarea>
+                <div class="weui-textarea-counter"></div>
+            </div>
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">活动名称</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入名称" v-model="name">
+        </div>
+    </div>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="请输入活动描述" rows="3" v-model="describe"></textarea>
+                <div class="weui-textarea-counter"></div>
+            </div>
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">受捐机构</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入受捐机构" v-model="institution">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">受捐机构地址</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入受捐机构地址" v-model="insAddress">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">联系电话</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入联系电话" v-model="insPhone">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">受捐对象</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入受捐对象" v-model="donateTo">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">受捐地址</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入受捐地址" v-model="donateAddr">
+        </div>
+    </div>
+    <div class="weui-uploader">
+        <p style="margin: 5px 0 5px 5px;">活动证明图片上传(第一张是活动宣传图)</p>
+        <div class="weui-uploader__bd">
+            <div class="weui-uploader__input-box" v-touch:tap="onUploadPic1" style="background-image: url('{{img1}}');">
+            </div>
+            <div class="weui-uploader__input-box" v-touch:tap="onUploadPic2" style="background-image: url('{{img2}}');">
+            </div>
+            <div class="weui-uploader__input-box" v-touch:tap="onUploadPic3" style="background-image: url('{{img3}}');">
+            </div>
+             <div class="weui-uploader__input-box" v-touch:tap="onUploadPic4" style="background-image: url('{{img4}}');">
+            </div>
+             <div class="weui-uploader__input-box" v-touch:tap="onUploadPic5" style="background-image: url('{{img5}}');">
+            </div>
+             <div class="weui-uploader__input-box" v-touch:tap="onUploadPic6" style="background-image: url('{{img6}}');">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="weui-btn-area">
+    <a class="weui-btn weui-btn_primary" style="background-color: #ffb43e;" v-touch:tap="onFinishTap">确定</a>
+</div>

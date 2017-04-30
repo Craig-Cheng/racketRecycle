@@ -1,0 +1,57 @@
+<div class="ui-main">
+    <div class="swiper-container ui-main__imagesSwiper">
+        <div class="swiper-wrapper">
+            <!--  <div class="ui-list__pic" style="background-image: url('{{mainImages[0].image}}');"></div>
+                <div class="ui-list__pic" style="background-image: url('{{mainImages[1].image}}');"></div>
+                <div class="ui-list__pic" style="background-image: url('{{mainImages[2].image}}');"></div>
+                <div class="ui-list__pic" style="background-image: url('{{mainImages[3].image}}');"></div> -->
+            <div class="swiper-slide">
+                <div class="ui-list__pic" style="background-image: url('{{mainImages[0].image}}');"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ui-list__pic" style="background-image: url('{{mainImages[1].image}}');"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ui-list__pic" style="background-image: url('{{mainImages[2].image}}');"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ui-list__pic" style="background-image: url('{{mainImages[3].image}}');"></div>
+            </div>
+            <!-- <div class="swiper-slide">slider3</div> -->
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="ui-main__sort">
+        <div v-for="(index,item) in sortList" v-touch:tap="onSortTap($index)">
+            <div v-bind:class="{'ui-sort__class':index == sortIndex}">{{item.content}}</div>
+        </div>
+        <!-- <div>
+            <input type="text" name="" placeholder="搜索">
+        </div>
+        <div class="ui-query__btn">
+            <i></i>
+        </div> -->
+    </div>
+    <div class="ui-main__list">
+        <div class="list-left" v-for="item in goodList" v-touch:tap="onDetailTap($index)">
+            <div class="list-image" style="background-image: url('{{item.images}}');"></div>
+            <p class="list-describe">{{item.rate_New}}{{ item.type | typeChange }}</p>
+            <div class="list-detail">
+                <div class="detail-ms">
+                    <p>{{item.name}}</p>
+                </div>
+                <div class="detail-digital">
+                    <p>¥{{item.price}}</p>
+                    <div class="nice">
+                        <i></i>
+                        <p>{{item.up}}</p>
+                    </div>
+                    <div class="collection">
+                        <i></i>
+                        <p>{{item.favNum}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

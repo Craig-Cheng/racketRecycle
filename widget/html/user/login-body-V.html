@@ -1,0 +1,47 @@
+<div class="ui-login">
+    <div class="ui-login__body">
+        <div class="ui-login__header">
+            <div class="ui-login__outCircle"></div>
+            <!-- <div></div> -->
+            <div class="ui-login__inCircle"></div>
+        </div>
+
+<form autocomplete="off">
+		<div class="ui-login__input">
+            <div class="ui-login__account">
+                <input type="text" placeholder="请输入用户名" v-model="account" >
+            </div>
+            <div class="ui-login__account">
+                <input type="password" placeholder="请输入密码" v-model="pwd" autocomplete="off">
+                <div class="del" v-touch:tap="clearPwdTap"></div>
+            </div>
+            <p v-touch:tap="forgetPwdTap">忘记密码?</p>
+            <div class="ui-login__button">
+                <div v-touch:tap="onLoginTap">
+                    <p>立即登录</p>
+                </div>
+                <div v-touch:tap="onRegisterTap">
+                    <p>马上注册</p>
+                </div>
+            </div>
+        </div>
+        </form>
+        <!-- <div class="ui-login__input">
+            <div class="ui-login__account">
+                <input type="text" placeholder="请输入用户名" v-model="account" autocomplete="off">
+            </div>
+            <div class="ui-login__account">
+                <input type="password" placeholder="请输入密码" v-model="pwd" autocomplete="off">
+            </div>
+            <p>忘记密码?</p>
+            <div class="ui-login__button">
+                <div v-touch:tap="onLoginTap">
+                    <p>立即登录</p>
+                </div>
+                <div v-touch:tap="onRegisterTap">
+                    <p>马上注册</p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>

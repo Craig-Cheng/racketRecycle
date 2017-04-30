@@ -1,0 +1,224 @@
+@charset "UTF-8";
+/* @name: 转为REM单位fn
+ * @ps: 默认宽度为750px
+ */
+/* @name: 上下左右居中 (未知高度)
+ * @ps: 需要设置父元素 display:table
+ */
+/* @name: 上下左右居中 （确定高度）*/
+/*
+ * @name: 文字溢出显示省略号
+ * @ps: 需要设置宽度
+ */
+/* @name: 强制不换行 */
+/* @name: 清除浮动 */
+/*
+ * @name:  三角形
+ * @param: $size  大小
+ * @param: $color 颜色
+ * @param: $type {string}  类型 (up || down || left || right || topleft || topright || bottomleft || bottomright)
+ */
+/* 主色调 */
+/* 辅助色 */
+/* 标题栏背景色 */
+/* 页面背景色 */
+/* 分隔线颜色 */
+/* 字体主色 */
+/* 字体辅助色 */
+/* 一级标题 */
+/* 二级标题 */
+/* 三级标题 */
+/* 正文 */
+/* 说明文字 */
+/* 导航字体 */
+/* 按钮圆角 */
+/* 遮罩透明度 */
+html {
+  padding: 0;
+  margin: 0;
+  background-image: url(../../image/user/bgi.jpg);
+  overflow: scroll; }
+
+.ui-login {
+  background-image: url(../../image/user/bgi.jpg); }
+
+.ui-login__body {
+  display: block;
+  margin: 10% 10%; }
+
+.ui-login__header {
+  position: relative;
+  width: 100%;
+  height: 2.88rem; }
+
+.ui-login__outCircle {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-image: url(../../image/user/circle2.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+     -moz-background-size: 100%;
+       -o-background-size: 100%;
+          background-size: 100%;
+  width: 2.88rem;
+  height: 1.4rem;
+  z-index: 9999; }
+
+.ui-login__inCircle {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-image: url(../../image/user/bgi.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+     -moz-background-size: 100%;
+       -o-background-size: 100%;
+          background-size: 100%;
+  width: 2.88rem;
+  height: 2.88rem;
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%; }
+  .ui-login__inCircle::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 5%;
+    top: 0;
+    bottom: 10%;
+    margin: auto;
+    background-image: url(../../image/user/logo.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+       -moz-background-size: 100%;
+         -o-background-size: 100%;
+            background-size: 100%;
+    width: 1.14rem;
+    height: .98rem;
+    z-index: 99; }
+  .ui-login__inCircle::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 42%;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../../image/user/word.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+       -moz-background-size: 100%;
+         -o-background-size: 100%;
+            background-size: 100%;
+    width: 1.26rem;
+    height: .38rem; }
+
+.ui-login__input {
+  display: block;
+  width: 100%;
+  height: 8rem;
+  margin-top: -1.28rem;
+  background-color: #ffffff;
+  z-index: 0;
+  -webkit-box-shadow: 0px 1px 15px 2px #ccc;
+     -moz-box-shadow: 0px 1px 15px 2px #ccc;
+          box-shadow: 0px 1px 15px 2px #ccc; }
+  .ui-login__input > p {
+    float: right;
+    font-size: .25rem;
+    text-align: right;
+    margin-right: 10%;
+    width: 1.4rem; }
+
+.ui-login__account {
+  width: 100%; }
+  .ui-login__account:first-child {
+    padding-top: 1.6rem;
+    position: relative; }
+    .ui-login__account:first-child::after {
+      content: '';
+      position: absolute;
+      left: .7rem;
+      top: 70%;
+      background-image: url(../../image/user/account.png);
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+         -moz-background-size: cover;
+           -o-background-size: cover;
+              background-size: cover;
+      width: .54rem;
+      height: .6rem; }
+  .ui-login__account:nth-child(2) {
+    position: relative; }
+    .ui-login__account:nth-child(2)::before {
+      content: '';
+      position: absolute;
+      left: .7rem;
+      top: 45%;
+      background-image: url(../../image/user/pwd.png);
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+         -moz-background-size: cover;
+           -o-background-size: cover;
+              background-size: cover;
+      width: .54rem;
+      height: .55rem; }
+  .ui-login__account > input {
+    margin: 0 10%;
+    width: 80%;
+    border: none;
+    border-width: 0 0 1px 0;
+    font-size: .35rem;
+    padding-left: .98rem; }
+
+.del {
+  position: absolute;
+  right: .7rem;
+  top: 45%;
+  background-image: url(../../image/user/del.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  width: .54rem;
+  height: .55rem; }
+
+.ui-login__button {
+  margin-top: 1.16rem;
+  font-size: .34rem;
+  text-align: center;
+  color: #ffffff; }
+  .ui-login__button > div:first-child {
+    -webkit-box-shadow: 0px 0px 5px 1px #828080;
+       -moz-box-shadow: 0px 0px 5px 1px #828080;
+            box-shadow: 0px 0px 5px 1px #828080;
+    margin: .62rem 10% .22rem 10%;
+    width: 80%;
+    height: .64rem;
+    line-height: .64rem;
+    background-color: #ffb43e;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px; }
+  .ui-login__button > div:last-child {
+    -webkit-box-shadow: 0px 0px 5px 1px #828080;
+       -moz-box-shadow: 0px 0px 5px 1px #828080;
+            box-shadow: 0px 0px 5px 1px #828080;
+    margin: .22rem 10% .22rem 10%;
+    width: 80%;
+    height: .64rem;
+    line-height: .64rem;
+    background-color: #abd01a;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px; }
+
+input:-webkit-autofill {
+  background-color: #fff; }
+
+
+/*# sourceMappingURL=data:application/json;base64,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 */

@@ -1,0 +1,11 @@
+<div id="header" class="ui-header is-base" v-bind:class="{'isHome':isHome}">
+    <div class="ui-header__leftBtn" v-touch:tap="onTapLeftMenu">
+    	<span class="ui-header__leftBtnMenu"></span>
+    </div>
+    <div v-touch:tap="onTitleTap" class="ui-header__title">{{title}}</div>
+    <div class="ui-header__rightBtn" v-touch:tap="onTapRightRemind">
+    	<span class="ui-list__remind">
+    		<p v-show="number">{{number}}</p>
+    	</span>
+    </div>
+</div>

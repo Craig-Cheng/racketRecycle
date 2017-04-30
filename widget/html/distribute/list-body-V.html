@@ -1,0 +1,50 @@
+<div class="aui-content aui-margin-b-15">
+    <ul class="aui-list aui-select-list">
+        <li class="aui-list-item noInfo" v-show="!hasLocation">
+            <p>暂无配送信息</p>
+            
+        </li>
+        
+        <li class="aui-list-item" v-for="(index,item) in list" v-show="hasLocation">
+            <div class="aui-list-item-label">
+                <input class="aui-radio" type="radio" name="radio" v-touch:tap='onChooseTap($index)'>
+            </div>
+            <div class="aui-list-item-inner ">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title aui-font-size-14">{{item.name}}</div>
+                    <div class="aui-list-item-right">{{item.phone}}</div>
+                </div>
+                <div class="aui-list-item-text">
+                    {{item.province}}{{item.city}}{{item.area}}{{item.detail}}
+                </div>
+                <div class="aui-label aui-btn-danger" style="float: right;"  v-touch:tap="onDelTap($index)">删除</div>
+                <div class="aui-label aui-btn-success" style="float: right; margin-right: 10px;" v-touch:tap="onEditTap($index)">编辑</div>
+            </div>
+        </li>
+        <li class="ui-addLocation" >
+            <div v-touch:tap="addNewLocation">
+               添加新地址
+            </div>
+        </li>
+        <li class="aui-list-item" v-show="hasLocation">
+            <div class="aui-list-item-label">
+                留言
+            </div>
+            <div class="aui-list-item-inner">
+                <!-- <div class="aui-list-item-label">
+                    留言
+                </div> -->
+                <div class="aui-list-item-input">
+                    <textarea placeholder="Textarea" style="border: 1px solid #ccc; border-radius: 5px;" v-model="msg">
+                    </textarea>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item" v-show="hasLocation">
+            <div class="aui-list-item-inner  aui-list-item-btn" style="text-align: center;">
+                <div class="aui-btn aui-btn-info aui-margin-r-5" v-touch:tap="onFinishTap">提交</div>
+                <div class="aui-btn aui-btn-danger aui-margin-l-5">取消</div>
+            </div>
+        </li>
+    </ul>
+</div>

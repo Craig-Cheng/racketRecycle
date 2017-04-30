@@ -1,0 +1,173 @@
+@charset 'utf-8';
+@import "../_config";
+html {
+    padding: 0;
+    margin: 0;
+}
+
+.ui-myInfo__header {
+    position: relative;
+    top: 0;
+    background-image: url(../../image/home/headerBGI.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 5.25rem;
+    width: 100%;
+}
+
+.ui-header__main {
+    display: flex;
+    width: 100%;
+    height: 3.15rem;
+}
+
+.header-main__name {
+    flex: 3;
+    position: relative;
+    &>div {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        text-align: center;
+        color: #fff;
+        background-color: #4e3b14;
+        font-size: .36rem;
+        height: .54rem;
+        line-height: .54rem;
+        border-radius: 10px;
+        width: 3.48rem;
+    }
+}
+
+.header-main__avatar {
+    flex: 2;
+
+    text-align: center;
+    &>div {
+        margin: 2% auto;
+        background-image: url(../../image/home/avatar.png);
+        border-radius: 100%;
+        background-size: cover;
+        border: 2px solid #e8e8e8;
+        box-shadow: 0 0 5px 2px #e8e8e8;
+        width: 2.32rem;
+        height: 2.32rem;
+        z-index: 99;
+    }
+    &>p {
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, .2);
+        font-size: .25rem;
+        color: #fff;
+        width: 1.92rem;
+        height: .34rem;
+        line-height: .34rem;
+        border-radius: 5px;
+    }
+}
+
+.ui-header__detail {
+    margin: .72rem 0 .36rem 10%;
+    height: 2.05rem;
+    font-size: .2rem;
+    &>div:first-child{
+        height: .57rem;
+        line-height: .57rem;
+    }
+    &>div:last-child {
+        display: flex;
+        height: 1.48rem;
+        &>div:first-child {
+            flex:2;
+            &>p {
+                margin-top: .1rem;
+            }
+        }
+         &>div:last-child {
+            flex: 3;
+            &>p {
+                margin-top: .1rem;
+            }
+        }
+    }
+}
+.ui-account,
+.ui-phone,
+.ui-sex,
+.ui-IDcard,
+.ui-birth {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: .1rem;
+}
+
+.ui-account {
+    background-image: url(../../image/home/account.png);
+    width: .23rem;
+    height: .25rem;
+    line-height: .24rem;
+}
+
+.ui-phone {
+    background-image: url(../../image/home/phone.png);
+    width: .26rem;
+    height: .24rem;
+    line-height: .23rem;
+}
+
+.ui-sex {
+    background-image: url(../../image/home/sex.png);
+    width: .24rem;
+    height: .22rem;
+    line-height: .21rem;
+}
+
+.ui-IDcard {
+    background-image: url(../../image/home/IDcard.png);
+    width: .25rem;
+    height: .18rem;
+    line-height: .18rem;
+}
+
+.ui-birth {
+    background-image: url(../../image/home/birth.png);
+    width: .21rem;
+    height: .22rem;
+    line-height: .22rem;
+}
+
+.ui-myInfo__list {
+    font-size: .35rem;
+    margin-top: .6rem;
+    margin-bottom: 1rem;
+    // padding-left: .66rem;
+    &>div {
+        margin: .3rem 4% 2px 4%;
+        border-bottom: 1px solid #ccc;
+        height: .5rem;
+        position: relative;
+        &>div {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            width: .9rem;
+            height: .52rem;
+        }
+    }
+}
+
+.ui-rightBtn {
+    display: inline-block;
+    position: relative;
+    right: -50%;
+    background-image: url(../../image/home/right.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: .32rem;
+    height: .32rem;
+    // border: 1px solid red;
+}

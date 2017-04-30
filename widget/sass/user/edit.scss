@@ -1,0 +1,248 @@
+@charset 'utf-8';
+@import "../_config";
+html {
+    padding: 0;
+    margin: 0;
+    // background-image: url(../../image/user/bgi.jpg);
+    background-image: url(../../image/user/bgi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    // overflow: scroll;
+}
+
+.ui-edit {
+    // position: fixed;
+    // top:0;
+    background-image: url(../../image/user/bgi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    // overflow: scroll;
+    // height: 9rem;
+}
+
+.ui-edit__input {
+    margin-top: .5rem auto;
+}
+
+.ui-input {
+    // padding-left: .76rem;
+    position: relative;
+    height: 1.08rem;
+    width: 100%;
+    margin-top: .26rem;
+    &:first-child {
+        &::after {
+            content: "";
+            position: absolute;
+            left: 15%;
+            // right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-image: url(../../image/user/name.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: .64rem;
+            width: .64rem;
+            // border: 1px solid green;
+        }
+    }
+    &:nth-child(2) {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 15%;
+            // right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-image: url(../../image/user/mail.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: .64rem;
+            width: .64rem;
+        }
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     right: 12%;
+        //     // right: 0;
+        //     top: 0;
+        //     bottom: 0;
+        //     margin: auto;
+        //     background-image: url(../../image/user/del.png);
+        //     background-repeat: no-repeat;
+        //     background-size: cover;
+        //     height: .48rem;
+        //     width: .48rem;
+        // }
+    }
+    &:nth-child(3) {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 15%;
+            // right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-image: url(../../image/user/IDcard.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: .64rem;
+            width: .64rem;
+        }
+    }
+    &:nth-child(4) {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 15%;
+            // right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-image: url(../../image/user/birth.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: .64rem;
+            width: .64rem;
+        }
+    }
+    &:nth-child(5) {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 15%;
+            // right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-image: url(../../image/user/sex.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: .64rem;
+            width: .64rem;
+        }
+    }
+    &:nth-child(6) {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 15%;
+            // right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-image: url(../../image/user/pay.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: .64rem;
+            width: .64rem;
+        }
+    }
+}
+.sex{
+    font-size: .32rem;
+    position: relative;
+}
+
+.ui-sex{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 30%;
+    // right: 0;
+    width: 60%;
+    border:none;
+    opacity: 0;
+    background-color: transparent;
+    // display: visibility
+}
+.ui-footer__aggress {
+    position: absolute;
+    left: 10%;
+    // right: 0;
+    top: 10%;
+    // bottom: 0;
+    margin: auto;
+    background-image: url(../../image/user/check.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: .32rem;
+    width: .32rem;
+    z-index: 99;
+    // border: 1px solid black;
+}
+
+.ui-input__class {
+    display: block;
+    margin: .13rem 10% .13rem 10%;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    // top: 0;
+    // bottom: 0;
+    // margin: auto;
+    width: 80%;
+    height: 1.08rem;
+    line-height: 1.08rem;
+    font-size: .32rem;
+    border-radius: 10px;
+    border: none;
+    padding-left: 20%;
+    color: #fff;
+    // background-color: #ecb335;
+    // background-color: rgba(229, 221, 203, .2);
+    background-color: rgba(0, 0, 0, .07);
+    // filter: blur(1px);
+}
+
+.ui-footer__font {
+    position: absolute;
+    left: 15%;
+    // right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    // padding-top: 20px;
+    font-size: .25rem;
+    color: #f5f2eb;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-size: .3rem;
+    color: #fff;
+}
+
+.ui-footer__button {
+    margin-top: 1.28rem;
+    margin-bottom: 2.2rem;
+    display: block;
+    width: 100%;
+    position: relative;
+    font-size: .34rem;
+    &>div {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 4.15rem;
+        height: .64rem;
+        line-height: .64rem;
+        background-color: #e8ad24;
+        text-align: center;
+        color: #ffffff;
+        border-radius: 10px;
+    }
+}
+
+span {
+    text-decoration: underline;
+    color: #000000;
+}
+

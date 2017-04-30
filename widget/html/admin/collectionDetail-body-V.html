@@ -1,0 +1,144 @@
+<div class="ui-main">
+    <div class="ui-mainImages" style="background-image: url('{{img1}}');">
+        <!--  <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-pagination"></div> -->
+    </div>
+    <div class="ui-describe">
+        <div>
+            <div class="ui-line"></div>
+            <div class="ui-describe__detail">
+                <div>{{name}}</div>
+                <div>
+                    <p>结束时间:<span>{{endTime | time}}</span></p>
+                    <!-- <p>时长:<span>半个月</span></p> -->
+                    <!-- <p>状态:<span>进行中</span></p> -->
+                </div>
+            </div>
+           <!--  <div class="ui-describe__digital">
+                <div>
+                    <i class="ui-nice"></i>
+                    <p>{{up}}</p>
+                </div>
+                <div>
+                    <i class="ui-collection"></i>
+                    <p>{{favNum}}</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="ui-good">
+        <div class="ui-good__detail">
+            <p class="ui-good__title">机构信息:</p>
+            <div class="ui-detail__list">
+                <div>
+                    <p>受捐机构:{{institution}}</p>
+                    <p>联系方式:{{insPhone}}</p>
+                    <p>募捐要求:{{requirement}}</p>
+                </div>
+                <div>
+                    <p>募捐类型:{{type | typeChange}}</p>
+                    <p>期望数量:{{amount}}+</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-mark">
+        <div>
+            <div class="ui-line"></div>
+            <div class="ui-mark__detail">
+                <p>活动说明:</p>
+                <p>{{describe}} </p>
+            </div>
+        </div>
+    </div>
+    <div class="ui-evidence">
+        <div>
+            <div class="ui-line"></div>
+            <div class="ui-mark__detail">
+                <p>相关图片证明:</p>
+            </div>
+            <!--   <div class="ui-evidence__img" v-for="item in evidenceImg" style="background-image: url('{{item.index}}');"></div> -->
+            <div class="ui-evidence__img" style="background-image: url('{{img1}}');"></div>
+            <div class="ui-evidence__img" style="background-image: url('{{img2}}');"></div>
+            <div class="ui-evidence__img" style="background-image: url('{{img3}}');"></div><div class="ui-evidence__img" style="background-image: url('{{img4}}');"></div><div class="ui-evidence__img" style="background-image: url('{{img5}}');"></div><div class="ui-evidence__img" style="background-image: url('{{img6}}');"></div>
+        </div>
+    </div>
+    <!--  <div class="ui-msg">
+        <div class="ui-msg__body">
+            <div class="ui-line"></div>
+            <div class="ui-msg__title">
+                <p>留言:</p>
+            </div>
+            <div class="ui-msg__detail">
+                <span class="ui-user__avatar"></span>
+                <div class="ui-msg__main">
+                    <div class="ui-msg__topLine"></div>
+                    <div class="ui-msg__detail">
+                        <div class="ui-msg__word">
+                            <p>纠结啊的框架萨丁少的地方是阿斯蒂芬啥地方暗示法暗示法暗示法暗示法阿斯蒂芬啊是</p>
+                        </div>
+                        <span class="ui-msg__time">2016/09/09</span>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="ui-msg__detail">
+                <span class="ui-user__avatar"></span>
+                <div class="ui-msg__main">
+                    <div class="ui-msg__topLine"></div>
+                    <div class="ui-msg__detail">
+                        <div class="ui-msg__word">
+                            <p>纠结啊的框架萨丁</p>
+                        </div>
+                        <span class="ui-msg__time">2016/09/09</span>
+                        <i>募捐方</i>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-msg__detail">
+                <span class="ui-user__avatar"></span>
+                <div class="ui-msg__main">
+                    <div class="ui-msg__topLine"></div>
+                    <div class="ui-msg__detail">
+                        <div class="ui-msg__word">
+                            <p>纠结啊的框架SDAADA dASD安稳的哇啊啊ASDSDAdAD啊是的萨丁</p>
+                        </div>
+                        <span class="ui-msg__time">2016/09/09</span>
+                        <i>募捐方</i>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-msg__detail">
+                <span class="ui-user__avatar"></span>
+                <div class="ui-msg__main">
+                    <div class="ui-msg__topLine"></div>
+                    <div class="ui-msg__detail">
+                        <div class="ui-msg__word">
+                            <p>纠结啊的框架SDAADA dASD安稳的哇啊啊ASDSDAdAD啊是的萨丁</p>
+                        </div>
+                        <span class="ui-msg__time">2016/09/09</span>
+                        <i>募捐方</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+<div class="ui-footer__btn">
+    <div v-touch:tap="onRefuseTap">
+        <!-- <i></i> -->
+        <span>拒绝</span>
+    </div>
+<!--     <div>
+        <i></i>
+        <span>收藏</span>
+    </div> -->
+    <div v-touch:tap="onOKTap">
+        <!-- <i></i> -->
+        <span>审核通过</span>
+    </div>
+</div>

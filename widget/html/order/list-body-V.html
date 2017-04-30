@@ -1,0 +1,118 @@
+<div>
+    <div class="ui-list__header">
+        <div class="ui-header__main">
+            <div class="header-main__name">
+                <div>
+                    <p>昵称: {{name}}</p>
+                </div>
+            </div>
+            <div class="header-main__avatar">
+                <div style="background-image: url('{{avatar}}');"></div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-list">
+        <div class="ui-list__title">
+            <p>个人订单列表</p>
+        </div>
+        <div class="ui-list__items">
+            <div v-for="(index,item) in itemList" v-bind:class="{'onSelect':index == itemIndex}" v-touch:tap="onChooseItemTap($index)">{{item.content}}</div>
+        </div>
+        <div v-show="buyTap">
+            <div class="ui-list__detail" v-for="one in buyList" v-show="buyTap">
+                <div class="ui-item">
+                    <div class="ui-item__time">
+                        <p>交易时间</p>
+                        <p>{{one.addDate | time}}</p>
+                    </div>
+                    <div class="ui-item__detail">
+                        <div v-touch:tap="onShowDetaiTap" class="detail">
+                            <div class="ui-detail__avatar" style="background-image: url('{{one.good.images}}');"></div>
+                            <div class="ui-detail__content">
+                                <p class="ui-word">订单ID:{{one.orderID}}</p>
+                                <p class="ui-word">商品名称: {{one.goodName}}</p>
+                                <p class="ui-word">成交价格¥:{{one.price}}</p>
+                                <div class="ui-good__status" v-touch:tap="receiveTap($index)" v-if="one.status == 1">点击收货</div>
+                                 <div class="ui-good__status" v-else>已收货</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-item__express">
+                    <div class="ui-express__title">交易完成</div>
+                    <div class="ui-express__line"></div>
+                    <div class="ui-express__time">
+                        <div class="startTime">
+                            <i></i>
+                            <p>下单时间</p>
+                            <p>{{one.addDate | time}}</p>
+                        </div>
+                        <div class="duringTime">
+                            <i></i>
+                            <p>发货</p>
+                            <p v-if="one.status == 1 || one.status == 2">{{one.deliveryTime | time}}</p>
+                        </div>
+                        <div class="endTime">
+                            <i></i>
+                            <p>确认收货</p>
+                            <p v-if="one.status == 2">{{one.receiveTime | time}}</p>
+                        </div>
+                    </div>
+                    <div class="ui-express__detail">
+                        <p>收货人:{{one.location.name}}</p>
+                        <p>电话：{{one.location.phone}}</p>
+                        <p>收获地址:{{one.location.province}}{{one.location.city}}{{one.location.area}}{{one.location.detail}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-show="!buyTap">
+            <div class="ui-list__detail" v-for="one in sellList">
+                <div class="ui-item">
+                    <div class="ui-item__time">
+                        <p>交易时间</p>
+                        <p>{{one.addDate | time}}</p>
+                    </div>
+                    <div class="ui-item__detail">
+                        <div v-touch:tap="onShowDetaiTap" class="detail">
+                            <div class="ui-detail__avatar" style="background-image: url('{{one.good.images}}');"></div>
+                            <div class="ui-detail__content">
+                                <p class="ui-word">订单ID:{{one.orderID}}</p>
+                                <p class="ui-word">商品名称: {{one.goodName}}</p>
+                                <p class="ui-word">成交价格¥:{{one.price}}</p>
+                                <div class="ui-good__status" v-touch:tap="deliverTap($index)" v-if="one.status == 0">点击发货</div>
+                                <div class="ui-good__status" v-else>已发货</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-item__express">
+                    <div class="ui-express__title">交易完成</div>
+                    <div class="ui-express__line"></div>
+                    <div class="ui-express__time">
+                        <div class="startTime">
+                            <i></i>
+                            <p>下单时间</p>
+                            <p>{{one.addDate | time}}</p>
+                        </div>
+                        <div class="duringTime">
+                            <i></i>
+                            <p>发货</p>
+                            <p v-if="one.status == 1">{{one.deliveryTime | time}}</p>
+                        </div>
+                        <div class="endTime">
+                            <i></i>
+                            <p>确认收货</p>
+                            <p v-if="one.status == 2">{{one.receiveTime | time}}</p>
+                        </div>
+                    </div>
+                    <div class="ui-express__detail">
+                        <p>收货人:{{one.location.name}}</p>
+                        <p>电话：{{one.location.phone}}</p>
+                        <p>收获地址:{{one.location.province}}{{one.location.city}}{{one.location.area}}{{one.location.detail}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

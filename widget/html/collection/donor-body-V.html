@@ -1,0 +1,28 @@
+<div class="aui-content aui-margin-b-15">
+    <ul class="aui-list aui-list-in">
+        <li class="aui-list-header">
+            捐赠人列表
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">姓名</div>
+                <div class="aui-list-item-title">物品</div>
+                <div class="aui-list-item-title">数量</div>
+                <div class="aui-list-item-right">
+                 <div class="aui-list-item-title">点击按钮</div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item" v-for="(index, item) in list">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">{{item.name}}</div>
+                <div class="aui-list-item-title">{{item.type | typeChange}}</div>
+                <div class="aui-list-item-title">{{item.amount}}</div>
+                <div class="aui-list-item-right">
+                    <div class="aui-label aui-label-info" v-touch:tap="onSureTap($index)" v-if="item.isReceive == 0">确认收到</div>
+                    <div class="aui-label" v-else>已经收到</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

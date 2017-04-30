@@ -1,0 +1,83 @@
+<div>
+    <div class="ui-myInfo__header">
+        <div class="ui-header__main">
+            <div class="header-main__name">
+                <!-- <div> -->
+                    <div>昵称: {{name}}</div>
+                    <!-- <div>111</div> -->
+                <!-- </div> -->
+            </div>
+            <div class="header-main__avatar">
+                <div style="background-image: url('{{avatar}}')"></div>
+                <p v-touch:tap="onChangeAvatar">更换头像</p>
+            </div>
+        </div>
+        <div class="ui-header__detail">
+            <div>
+                <i class="ui-account"></i><span>账号:{{account}}</span>
+            </div>
+            <div>
+                <div>
+                    <p><i class="ui-phone"></i>电话:{{phone}}</p>
+                    <p><i class="ui-sex"></i>性别: {{sex | sex}}</p>
+                </div>
+                <div class="ui-right__info">
+                    <p><i class="ui-IDcard"></i>邮箱:{{mail}}</p>
+                    <p><i class="ui-birth"></i>出生年月:{{birthday}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-myInfo__list">
+        <div>
+            <span>查看个人订单列表</span>
+            <div v-touch:tap="onListTap">
+            	<i class="ui-rightBtn"></i>
+            </div>
+        </div>
+        <div>
+            <span>出售商品</span>
+            <div v-touch:tap="onSellTap">
+            	<i class="ui-rightBtn"></i>
+            </div>
+        </div>
+        <div>
+            <span>发起募捐</span>
+            <div v-touch:tap="onCreateCollectionTap">
+            	<i class="ui-rightBtn"></i>
+            </div>
+        </div>
+       <!--  <div>
+            <span>捐赠商品</span>
+            <div>
+            	<i class="ui-rightBtn"></i>
+            </div>
+        </div> -->
+        <div>
+            <span>编辑个人信息</span>
+            <div v-touch:tap="onEditTap">
+            	<i class="ui-rightBtn"></i>
+            </div>
+        </div>
+        <div>
+            <span>查看我的募捐</span>
+            <div v-touch:tap="onMyCLTap">
+                <i class="ui-rightBtn"></i>
+            </div>
+        </div>
+        <!-- <div>
+            <span>身份验证</span>
+            <div v-touch:tap="onVerifyTap">
+            	<i class="ui-rightBtn"></i>
+            </div>
+        </div> -->
+         <div>
+            <span>关于</span>
+            <div v-touch:tap="onAboutTap">
+                <i class="ui-rightBtn"></i>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>

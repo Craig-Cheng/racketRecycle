@@ -1,0 +1,71 @@
+<div class="aui-content aui-margin-b-15">
+    <ul class="aui-list aui-form-list">
+        <li class="aui-list-header" style="font-size: 18px;background-color: #fff;border-bottom: 1px solid #ccc;">请输入内容</li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    联系人
+                </div>
+                <div class="aui-list-item-input">
+                    <input type="text" placeholder="联系人" v-model="name">
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    电话
+                </div>
+                <div class="aui-list-item-input">
+                    <input type="number" placeholder="电话" v-model="phone">
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    省
+                </div>
+                <div class="aui-list-item-input">
+                    <input type="te4xt" placeholder="省" readonly v-touch:tap="onSelectLocation" v-model="province">
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    市
+                </div>
+                <div class="aui-list-item-input">
+                    <input type="text" placeholder="市" readonly v-touch:tap="onSelectLocation" v-model="city">
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    区
+                </div>
+                <div class="aui-list-item-input">
+                    <input type="text" placeholder="区" readonly v-touch:tap="onSelectLocation" v-model="area">
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    详细地址
+                </div>
+                <div class="aui-list-item-input">
+                    <input type="text" placeholder="详细地址" v-model="detail">
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner aui-list-item-center aui-list-item-btn">
+                <div class="aui-btn aui-btn-info aui-margin-r-5" v-touch:tap="onFinishTap">提交</div>
+                <div class="aui-btn aui-btn-danger aui-margin-l-5" v-touch:tap="onCancelTap">取消</div>
+            </div>
+        </li>
+    </ul>
+</div>
